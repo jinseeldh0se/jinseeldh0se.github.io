@@ -1,0 +1,47 @@
+{
+    "projects": [
+      {
+        "heading": "Netflix clone",
+        "paragraph": "In my latest project, I've created a Netflix clone using React, allowing users to experience a streamlined and interactive interface for browsing and watching their favorite movies and TV shows. The application features a dynamic banner component that initially displays a movie poster and seamlessly transitions to a trailer after a short delay. Additionally, the project includes a responsive navbar that hides when not in use, and movie cards that scale and reveal detailed information on hover.",
+        "images": "/Project_photo/project1/Netflix-Symbol.png",
+        "hashtags": ["#JavaScript", "#React", "#CSS", "#API", "#HTML"],
+        "github":"https://github.com/jinseeldh0se/Netflix_clone"
+      },
+      {
+        "heading": "Olx clone",
+        "paragraph": "In my latest project, I've developed an OLX clone using React, providing users with a user-friendly platform to buy and sell goods. This application features an intuitive interface where users can easily post ads for items, browse various categories, and contact sellers directly. The project integrates Firebase authentication to ensure secure user accounts enabling efficient handling of user listings and transactions. With responsive design and seamless navigation, this OLX clone offers a convenient and efficient marketplace experience for users.",
+        "images": "/Project_photo/project1/olx.png",
+        "hashtags": ["#JavaScript", "#React", "#CSS", "#API", "#HTML"],
+        "github":""
+      }
+    ],
+    "skills": [
+      { "name": "JavaScript", "width": 80, "image": "Skill_photo/icons8-javascript.svg" },
+      { "name": "HTML", "width": 90, "image": "Skill_photo/icons8-html.svg" },
+      { "name": "CSS", "width": 85, "image": "Skill_photo/icons8-css.svg" },
+      { "name": "React", "width": 75, "image": "Skill_photo/icons8-react-native.svg" }
+    ],
+    "experience": [
+      
+    ],"education":[
+      {
+        "id": 1,
+        "school": "T.V Joseph Memorial Higher Secondary School",
+        "yearOfPassing": "2014",
+        "fieldOfStudy": "SSLC (state board)",
+        "image": "School_photo/school1.jpg"
+      },
+      {
+        "id": 2,
+        "school": "Mar Elias Higher Secondary School",
+        "yearOfPassing": "2018",
+        "fieldOfStudy": "Pre-degree in Computer Science",
+        "image":"School_photo/school2.jpg"
+      }
+      
+    ],
+    "certificate":[
+      
+    ]
+  }
+  
