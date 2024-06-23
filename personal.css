@@ -1,0 +1,882 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+}
+
+body{
+
+    background: #1A1818;
+    color: white;
+    background: url('./Photos/pxfuel.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.nav-bar{
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    display: flex;
+    position: relative;
+    align-items: center;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(  255, 255, 255, 0.30);
+
+}
+
+
+h3{
+
+    margin-left: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.3s ease-in-out;
+
+}
+
+h3.active {
+    background-color: #262626;
+    padding: 15px;
+    border-radius: 30px;
+    transform: translateX(10px)
+}
+
+.Home{
+
+    margin-left: 625px;
+
+}
+
+.profile{
+
+    height: 100%;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile h1{
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.profile h4{
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.Content{
+
+    position: relative;
+    height: 430px;
+    width: 55%;
+    top: 35px;
+    left: 40px;
+    border-radius: 30px;
+    overflow: hidden;
+
+}
+
+.Photo{
+
+    position: absolute;
+    top: 250px;
+    left: 750px;
+    height: 200px;
+    width: 200px;
+    border-radius: 15px;
+    /* border: 1px solid #000; */
+    background: #173055;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+.home{
+
+    padding-top: 20px;
+    margin-left: 30px;
+    flex-direction: column;
+    overflow: scroll;
+
+
+}
+
+.home p{
+
+    margin-top: 10px;
+    margin-right: 60px;
+    text-align: justify;
+
+}
+
+.Photo img{
+
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+.skill{
+
+    padding-top: 20px;
+    margin-left: 30px;
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+
+}
+
+.projects{
+
+    padding-top: 20px;
+    margin-left: 30px;
+   
+
+}
+
+.contact{
+
+    padding-top: 20px;
+    margin-left: 30px;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+.Content .section{
+
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+
+}
+
+.Content .section.active{
+
+    display: block;
+    opacity: 1;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.Photo.show {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 0.5s;
+}
+
+.Photo.hide {
+    display: block;
+    opacity: 0;
+    animation: fadeOut 0.5s;
+}
+
+
+
+
+.Netflix{
+
+    height: 330px;
+    width: 100px;
+    border-radius: 10px;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(7, 7, 7, 0.952);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(17, 16, 16, 0.774);
+    margin-top: 50px;
+    margin-left: -80px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.Netflix h1{
+
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding-left: 25px;
+    white-space: nowrap;
+    padding-top: 25px;
+    word-spacing: 10px;
+    background: linear-gradient(90deg, black, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: 0.5s ease-in-out;
+}
+
+.Netflix p{
+
+    display: none;
+    transition: 0.5s ease-in-out;
+
+}
+
+.Netflix button{
+
+    display: none;
+    transition: 0.5s ease-in-out;
+
+}
+
+.Olx{
+
+    height: 330px;
+    width: 100px;
+    border-radius: 10px;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(7, 7, 7, 0.952);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(17, 16, 16, 0.774);
+    margin-top: 50px;
+    margin-left: 20px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.Olx h1{
+
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding-left: 25px;
+    white-space: nowrap;
+    padding-top: 25px;
+    word-spacing: 10px;
+    background: linear-gradient(90deg, purple, green, yellow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: 0.5s ease-in-out;
+
+}
+
+.Olx p{
+
+    display: none;
+    transition: 0.5s ease-in-out;
+
+}
+
+.Olx button{
+
+    display: none;
+    transition: 0.5s ease-in-out;
+
+}
+
+.RealTime{
+
+    height: 330px;
+    width: 100px;
+    border-radius: 10px;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(7, 7, 7, 0.952);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(17, 16, 16, 0.774);
+    margin-top: 50px;
+    margin-left: 20px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.RealTime h1{
+
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding-left: 25px;
+    white-space: nowrap;
+    padding-top: 25px;
+    background: linear-gradient(90deg, rgb(37, 150, 202), rgb(151, 18, 18), rgb(51, 255, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: 0.5s ease-in-out;
+
+}
+
+.RealTime p{
+
+    display: none;
+    transition: 0.5s ease-in-out;
+
+}
+
+.RealTime button{
+
+    display: none;
+    transition: 0.5s ease-in-out;
+}
+
+.Ecommerce{
+
+    height: 330px;
+    width: 100px;
+    border-radius: 10px;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(7, 7, 7, 0.952);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(17, 16, 16, 0.774);
+    margin-top: 50px;
+    margin-left: 20px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.Ecommerce h1{
+
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding-left: 30px;
+    font-size: x-large;
+    white-space: nowrap;
+    padding-top: 5px;
+    background: linear-gradient(90deg, rgb(31, 240, 49), rgb(2, 44, 4), rgb(51, 255, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: 0.5s ease-in-out;
+
+}
+
+.Ecommerce p{
+
+    display: none;
+    transition: 0.5s ease-in-out;
+
+}
+
+.Ecommerce button{
+
+    display: none;
+    transition: 0.5s ease-in-out;
+}
+
+.AiBot{
+
+    height: 330px;
+    width: 100px;
+    border-radius: 10px;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(7, 7, 7, 0.952);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(17, 16, 16, 0.774);
+    margin-top: 50px;
+    margin-left: 20px;
+    transition: 0.5s ease-in-out;
+
+
+}
+
+.AiBot h1{
+
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding-left: 25px;
+    white-space: nowrap;
+    padding-top: 25px;
+    background: linear-gradient(90deg, rgb(37, 150, 202), rgb(151, 18, 18), rgb(51, 255, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: 0.5s ease-in-out;
+
+}
+
+.AiBot p{
+
+    display: none;
+    transition: 0.5s ease-in-out;
+
+}
+
+.AiBot button{
+
+    display: none;
+    transition: 0.5s ease-in-out;
+}
+
+.Netflix:hover{
+    width: 600px;
+    background-image: linear-gradient(90deg, rgb(32, 31, 31), transparent), url('./Photos/netflix.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s ease-in-out;
+}
+
+.Netflix:hover p{
+
+    display: block;
+    margin-left: 25px;
+    margin-top: 10px;transition: 0.5s ease-in-out;
+
+}
+
+.Netflix:hover button{
+
+    display: block;
+    margin-left: 25px;
+    margin-top: 30px;
+    transition: 0.5s ease-in-out;
+
+}
+.Netflix:hover h1{
+
+    writing-mode: horizontal-tb;
+    text-orientation: sideways;
+    transition: 0.5s ease-in-out;
+
+}
+
+.GitHub{
+
+    height: 25px;
+    border: none;
+    width: 50px;
+    background-color: #262626;
+    border-radius: 10px;
+}
+
+.Olx:hover{
+
+    width: 600px;
+    background-image: linear-gradient(90deg, rgb(32, 31, 31), transparent), url('Photos/olx.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s ease-in-out;
+
+}
+
+.Olx:hover p{
+
+    display: block;
+    margin-left: 25px;
+    margin-top: 10px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.Olx:hover button{
+
+    display: block;
+    margin-left: 25px;
+    margin-top: 30px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.Olx:hover h1{
+
+    writing-mode: horizontal-tb;
+    text-orientation: sideways;
+    transition: 0.5s ease-in-out;
+
+}
+
+.RealTime:hover{
+
+    width: 600px;
+    background-image: linear-gradient(90deg, rgb(32, 31, 31), transparent), url('Photos/WhatsApp.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s ease-in-out;
+
+}
+
+.RealTime:hover h1{
+
+    writing-mode: horizontal-tb;
+    text-orientation: sideways;
+    transition: 0.5s ease-in-out;
+
+}
+
+.RealTime:hover p{
+
+    display: block;
+    margin-left: 25px;
+    margin-top: 10px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.RealTime:hover button{
+
+    display: block;
+    margin-left: 25px;
+    margin-top: 30px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.Ecommerce:hover{
+
+    width: 600px;
+    background-image: linear-gradient(90deg, rgb(32, 31, 31), transparent), url('Photos/WhatsApp.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s ease-in-out;
+
+}
+
+.Ecommerce:hover h1{
+
+    writing-mode: horizontal-tb;
+    text-orientation: sideways;
+    transition: 0.5s ease-in-out;
+
+}
+
+.Ecommerce:hover p{
+
+    display: block;
+    margin-left: 25px;
+    margin-top: 10px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.Ecommerce:hover button{
+
+    display: block;
+    margin-left: 25px;
+    margin-top: 30px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.AiBot:hover{
+
+    width: 600px;
+    background-image: linear-gradient(90deg, rgb(32, 31, 31), transparent), url('Photos/WhatsApp.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s ease-in-out;
+    
+
+}
+
+.AiBot:hover h1{
+
+    writing-mode: horizontal-tb;
+    text-orientation: sideways;
+    transition: 0.5s ease-in-out;
+
+}
+
+.AiBot:hover p{
+
+    display: block;
+    margin-left: 25px;
+    margin-top: 10px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.AiBot:hover button{
+
+    display: block;
+    margin-left: 25px;
+    margin-top: 30px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.html{
+
+    background-color: #1A1818;
+    height: 220px;
+    width: 220px;
+    margin-left: -80px;
+    margin-top: 50px;
+    border-radius: 15px;
+
+}
+
+.css{
+
+    background-color: #1A1818;
+    height: 220px;
+    width: 220px;
+    margin-left: 20px;
+    margin-top: 50px;
+    border-radius: 15px;
+
+}
+
+.react{
+
+    background-color: #1A1818;
+    height: 220px;
+    width: 220px;
+    margin-left: 20px;
+    margin-top: 50px;
+    border-radius: 15px;
+
+}
+
+.mongodb{
+
+    margin-bottom: 41px;
+    background-color: #1A1818;
+    height: 220px;
+    width: 220px;
+    margin-left: -700px;
+    margin-top: 285px;
+    border-radius: 15px;
+
+}
+
+.python{
+
+    margin-bottom: 41px;
+    background-color: #1A1818;
+    height: 220px;
+    width: 220px;
+    margin-left: 20px;
+    margin-top: 285px;
+    border-radius: 15px;
+}
+
+.nodejs{
+
+    margin-bottom: 41px;
+    background-color: #1A1818;
+    height: 220px;
+    width: 220px;
+    margin-left: 20px;
+    margin-top: 285px;
+    border-radius: 15px;
+
+}
+
+.skill::-webkit-scrollbar{
+
+    display: none;
+
+}
+
+.html h2{
+
+    margin-top: 15px;
+    margin-left: 15px;
+
+}
+
+.skill h2{
+
+    margin-top: 15px;
+    margin-left: 15px;
+
+}
+
+.skill img{
+
+    height: 103px;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 180px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.per-bar{
+
+    height: 25px;
+    margin-left: 20px;
+    width: 180px;
+    border-radius: 30px;
+    margin-top: 15px;
+    background-color: #262626;
+
+}
+
+.per-bar-1{
+
+    height: 25px;
+    width: 95%;
+    background-color: white;
+    border-radius: 15px 0px 0px 15px;
+
+}
+
+.per-bar-2{
+
+    height: 25px;
+    width: 85%;
+    background-color: white;
+    border-radius: 15px 0px 0px 15px;
+
+}
+
+.per-bar-3{
+
+    height: 25px;
+    width: 90%;
+    background-color: white;
+    border-radius: 15px 0px 0px 15px;
+
+}
+
+.per-bar-4{
+
+    height: 25px;
+    width: 70%;
+    background-color: white;
+    border-radius: 15px 0px 0px 15px;
+
+}
+
+.per-bar-5{
+
+    height: 25px;
+    width: 80%;
+    background-color: white;
+    border-radius: 15px 0px 0px 15px;
+
+}
+
+.per-bar-6{
+
+    height: 25px;
+    width: 85%;
+    background-color: white;
+    border-radius: 15px 0px 0px 15px;
+
+}
+
+.contact label{
+
+    margin-top: 15px;
+
+}
+
+.name{
+
+    position: relative;
+    top: 40px;
+    left: -80px;
+    height: 50px;
+    width: 330px;
+    border-radius: 30px;
+    border: none;
+}
+
+.name-1{
+
+    position: relative;
+    left: 20px;
+    top: 5px;
+}
+
+.email-1{
+
+    position: relative;
+    left: -40px;
+    top: 5px;
+
+}
+
+.email{
+
+    position: relative;
+    top: -200px;
+    left: 360px;
+    height: 50px;
+    width: 330px;
+    border-radius: 30px;
+    border: none;
+    border-radius: 30px;
+}
+
+.textarea{
+
+    position: relative;
+    height: 200px;
+    width: 380px;
+    top: 65px;
+    padding-left: 20px;
+    left: -230px;
+    padding-top: 20px;
+    border: none;
+    border-radius: 30px;
+
+}
+
+.submit{
+
+    background-color: #23d723;
+    border-radius: 20px;
+    height: 30px;
+    position: relative;
+    left: 260px;
+    top: 50px;
+    width: 60px;
+    color: white;
+    border: none;
+
+}
+
+.home::-webkit-scrollbar{
+
+    display: none;
+
+}
